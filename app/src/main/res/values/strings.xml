@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Section</string>
+    <string name="input_FIO_of_members">Введите ФИО участников</string>
+    <string name="hint_FIO">Фамилия Имя Отчество</string>
+    <string name="add_member_FIO">Добавить\n участника</string>
+    <string name="get_members">Показать всех\n участников</string>
+    <string name="menu_string_clear">Очистить список</string>
+    <string name="pull_button_text">Сохранить\n изменения</string>
+</resources>

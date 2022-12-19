@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#4242CA">
+
+    <TextView
+        android:id="@+id/text_input_FIOs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="@string/input_FIO_of_members"
+        android:textColor="#BC5232"
+        android:background="#1E2C78"
+        android:layout_margin="10dp"
+        android:padding="5dp"/>
+
+    <EditText
+        android:id="@+id/input_FIO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_input_FIOs"
+        android:textColor="#BC9532"
+        android:textColorHint="#C3A863"
+        android:textSize="20sp"
+        android:background="#1E2C78"
+        android:gravity="center"
+        android:hint="@string/hint_FIO"
+        android:layout_margin="10dp"
+        android:padding="5dp"/>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_FIO"
+        app:layout_constraintEnd_toStartOf="@id/get_button"
+        android:backgroundTint="#81CA4D"
+        android:text="@string/add_member_FIO"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="addNewMember"/>
+
+    <Button
+        android:id="@+id/get_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/add_button"
+        app:layout_constraintTop_toBottomOf="@id/input_FIO"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#81CA4D"
+        android:text="@string/get_members"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="getMembers"/>
+
+
+    <ScrollView
+        android:id="@+id/vertical_scroll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/list_of_members"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1E2C78"
+            android:textSize="19sp"
+            android:textColor="#ADFFE2"
+            android:layout_margin="10dp"
+            android:padding="15dp"/>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
